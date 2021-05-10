@@ -1,0 +1,10 @@
+<div id="search-component">
+  <form autocomplete="off">
+    <input #searchBox id="search-box" (click)="refreshSearch()" (input)="search(searchBox.value)" class="rounded bg-dark text-white" placeholder="Search"/>
+  </form>
+  <ul class="search-result m-0">
+    <li *ngFor="let plane of planes$ | async">
+      <a (click)="clearSearch();searchBox.value = '';" routerLink="/menu/{{plane.id}}" class="rounded bg-dark">{{plane.name}}</a>
+    </li>
+  </ul>
+</div>

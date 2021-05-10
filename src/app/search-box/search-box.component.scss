@@ -1,0 +1,39 @@
+input {
+  padding: .5rem;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  display: block;
+}
+
+li {
+  list-style-type: none;
+}
+.search-result li a {
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+  padding: .5rem;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+}
+
+.search-result li a:hover {
+  background-color: #435A60;
+  color: white;
+}
+
+ul.search-result {
+  padding: 1;
+  margin-top: 0;
+  padding-left: 0;
+  position: fixed;
+  width: 200px;
+  z-index: 1;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: .8; /* Firefox */
+}

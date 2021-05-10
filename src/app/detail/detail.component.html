@@ -1,0 +1,78 @@
+<rg-img-viewer [imgUrl]="imgUrl" [open]="viewerOpen" (close)="viewerOpen = false"></rg-img-viewer>
+
+    <div class="container-fluid minHeightSet bg-dark">
+    <div class="row p-4 bg-dark">
+        <div class="col-md-10 mx-auto">
+            <div class="p-4 bg-secondary shadow rounded text-white">
+                <div class="pt-0 pb-4">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <div routerLink="/menu" class="btn btn-outline-light btn-sm mr-2">Back</div>
+                            <div routerLink="/menu/{{id}}/edit" class="btn btn-outline-light btn-sm">Edit page</div>
+                        </div>
+                        
+                        <div class="btn btn-outline-danger btn-sm text-white" (click)="deleteClick()">Delete</div>
+                    </div>
+                    <div class="d-flex text-white justify-content-center">
+                        <h1 class="mt-2 display-2">{{plane.name}}</h1>
+                    </div>
+                </div>
+                <div class="py-3">
+                    <h4 class="my-2">Specifications:</h4>
+                    <div class="col-md-12 p-4 rounded shadow-sm bg-dark">
+
+                        <div class="d-flex align-items-center justify-content-start">
+                            <div class="col-md-2 d-flex justify-content-end ">
+                                <p class="m-0 p-0">Country:</p>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-start">
+                                <p class="m-0 p-0">{{plane.country}}</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <div class="col-md-2 d-flex justify-content-end">
+                                <p class="m-0 p-0">Manufacturer:</p>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-start">
+                                <p class="m-0 p-0">{{plane.manufacturer}}</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <div class="col-md-2 d-flex justify-content-end">
+                                <p class="m-0 p-0">Role:</p>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-start">
+                                <p class="m-0 p-0">{{plane.role}}</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <div class="col-md-2 d-flex justify-content-end">
+                                <p class="m-0 p-0">Max Speed:</p>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-start">
+                                <p class="m-0 p-0">{{plane.maxSpeed}} Knots</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <div class="col-md-2 d-flex justify-content-end">
+                                <p class="m-0 p-0">Max Altitude:</p>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-start">
+                                <p class="m-0 p-0">{{plane.maxAltitude}} Feet</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <div class="d-flex align-items-center justify-content-center mb-3">
+                        <h2 class="mb-4">Gallery</h2>
+                    </div>
+                    <div class="row">
+                        <div *ngFor="let img of plane.imgs" class="col-lg-6 mb-2 px-1 py-0" (click)="openImg(img)"><img src="{{img}}" alt="" class="img-fluid rounded shadow-sm"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

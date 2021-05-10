@@ -1,0 +1,46 @@
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<nav class="navbar navbar-expand-lg bg-secondary py-2 shadow" >
+
+    <div class="container-fluid col-md-10">
+
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+                <a routerLink="/menu" class="navbar-brand">
+                    <img src="assets/icons/logo.png" alt="logo">
+                </a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/menu" class="nav-link text-white">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/menu/new" class="nav-link text-white">Create New</a>
+            </li>
+
+        </ul>
+
+        <rg-search-box></rg-search-box>
+
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer class="bg-secondary footer shadow">
+    <div class="d-flex justify-content-between p-4 container-fluid col-md-10">
+
+        <div class="d-inline-flex align-self-center text-white">
+            <p class="m-0">© {{year}} Bocko, All right reserved, Designed by <a href="https://www.twitter.com/BockoOfficial" class="text-white">Bocko</a></p>
+        </div>
+        
+        <div class="d-inline-flex">
+            <a href="https://www.twitch.tv/BockoOfficial"><i class="fab fa-twitch p-2 text-white"></i></a>
+            <a href="https://www.twitter.com/BockoOfficial"><i class="fab fa-twitter p-2 text-white"></i></a>
+            <a href="https://www.youtube.com/channel/UCVD-cYbeQ1yYLsz4HJ41PLw"><i class="fab fa-youtube p-2 text-white"></i></a>
+        </div>
+        
+    </div>
+</footer>

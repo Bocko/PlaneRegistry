@@ -1,0 +1,48 @@
+<div class="container-fluid minHeightSet bg-dark">
+    <div class="row p-4">
+        <div class="col-md-10 mx-auto">
+            <div class="p-4 bg-secondary shadow rounded text-light">
+                <div class="pt-0 pb-4 border-bottom">
+                    <div class="d-flex text-white justify-content-center">
+                        <h1 class="display-2">Planes</h1>
+                    </div>
+                </div>
+                <div class="pt-4 d-flex justify-content-end">
+                    <button class="btn btn-outline-light btn-sm m-1" (click)="switchView()">{{viewBtnTxt}} view</button>
+                </div>
+
+                <div *ngIf="!grid" class="p-1 mt-4 rounded shadow-sm bg-dark align-items-center text-white">
+                    <div class="d-flex align-items-center p-2">
+                        <p class="p-0 m-0 pr-4">Picture</p>
+                        <div class="col-md-11">
+                            <div class="container row">
+                                <div class="col-md-2 ">
+                                    <p class="p-0 m-0">Name</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <p class="p-0 m-0">Country</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="p-0 m-0">Manufacturer</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="p-0 m-0">Role</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="!grid" class="pt-3">
+                    <rg-menu-items-list *ngFor="let plane of planes" [plane]="plane" class="detailLink" routerLink="/menu/{{plane.id}}"></rg-menu-items-list>
+                </div>
+
+                <div *ngIf="grid" class="pt-3">
+                    <div class="row">
+                        <rg-menu-items-grid *ngFor="let plane of planes" [plane]="plane" class="p-1 col-md-4 detailLink" routerLink="/menu/{{plane.id}}"></rg-menu-items-grid>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
