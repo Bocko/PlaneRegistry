@@ -5,7 +5,7 @@ This project was made as one of the homeworks for my Client Apps class in my 4th
 # Features?
 
 ### Angular
-*Achived with CryE- Angular*
+*Achived with CryE- Angular*  
 The project uses the angular framework to create a single page application. 
 
 ### Bootstrap
