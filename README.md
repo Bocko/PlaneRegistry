@@ -19,7 +19,7 @@ You can try out this web app [here](https://bocko.github.io/PlaneRegistry).!
 
 # Manual?
 
-The app consists of three map pages. Two of these can be accessed from the navbar. The other opens from the menu.
+The app consists of three main pages. Two of these can be accessed from the navbar. The other opens from the menu.
 
 ### Menu
 The first is the menu. Here are all the planes stored in the In-Memory DB. You can choose two types of layout, grid or list. If you click on one of the planes the app will take you to the selected planes page.
